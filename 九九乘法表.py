@@ -1,4 +1,5 @@
-i = 3
-for j in range(1, 10):
-    print(f"1 x {j} = {1 * j}", end="  ")
-print()
+# 打印九九乘法表（下三角形式，共 9 行）
+for i in range(1, 10):  # -  range(1,10) ：取 1,2,3…9(左闭右开，取不到10)，i 同时是被乘数
+    for j in range(1, i + 1):  # 内层循环：j 从 1 到 i，控制每行输出的列数，保证 j <= i
+        print(f"{j} * {i}={i*j}", end="\t")  #end="\t" ：打印完一个式子不换行，用制表符隔开
+    print()  # 一行结束，换行
